@@ -1,0 +1,1088 @@
+body, html {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	height: 100%;
+	width: 100%;
+}
+
+body, html, div, table, tr, td, span, header, section {
+	margin: 0;
+	padding: 0;
+	/* see http://stackoverflow.com/questions/5210481/disable-orange-outline-highlight-on-focus */
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+header, section {
+	display: block;
+	overflow: hidden;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+html {
+	font-family: sans-serif;
+	color: white;
+	font-size: 100%;
+	background-image:url("../images/stars-background.gif");
+}
+
+ul, ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+a, a:visited, button, .button {
+	text-decoration: none;
+	color: white;
+	outline: solid #111111 1px;
+	border: none transparent 0px;
+	text-align: center;
+	cursor: pointer;
+	line-height: 3em;
+	height:3em;
+	font-size: 100%;
+	background-color: #3755ae;
+	appearance: none;
+	float: left;
+	width: 100%;
+	padding:0;
+	font-weight:bold;
+}
+
+a.disabled,button.disabled {
+	background-color: rgb(20, 40, 60);
+	color: darkgray !important;
+	filter:grayscale(0.5) blur(0.7px);
+}
+
+.half-width {
+	width: 50%;
+}
+
+@media ( max-width : 800px) {
+	a, button {
+		font-size: 90%;
+		width: 100%;
+	}
+}
+
+.full-width {
+	display: block;
+	width: 100%;
+}
+
+a:hover, button:hover, .progress-indicator:hover {
+	text-decoration: none;
+}
+
+a:hover, button:hover {
+	background-color: rgb(50, 158, 159);
+}
+
+.screen{
+	left:0;
+	right:0;
+	position:absolute;
+}
+
+/*
+ * Credits
+ */
+ 
+.credits a {
+	line-height:1.5em;
+	outline: none transparent 0px;
+	width: auto;
+	float: none;
+}
+
+/*
+ * Long range scan
+ */
+ #longrangescan {
+	width: 99.5%;
+	background: rgba(0, 0, 0, 0.7);
+}
+ 
+.region-names {
+	background-color: #111111;
+	color: white;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+.region-names > td {
+	line-height: 2em;
+}
+
+.quadrants {
+	color: #636363;
+}
+
+.quadrants > td {
+	border-right: solid DarkViolet 1px;
+	padding: unset;
+	cursor: pointer;
+	text-align: center;
+}
+
+.navigation-target{
+	color:black;
+}
+
+.explored {
+	color: white;
+}
+
+.has-enterprise {
+	outline: solid cadetblue 2px;
+	background-color: darkcyan;
+}
+
+.navigation-target {
+	background-color: rgba(200,148,60,0.5);
+}
+
+.has-klingons {
+	background-color:#a3393d;
+}
+
+.cloaked {
+	color: transparent !important;
+}
+
+.has-starbase {
+	background: blue;
+}
+
+.has-starbase.has-klingons {
+	background: repeating-linear-gradient(to right, maroon, maroon 5px, midnightblue 5px
+		, midnightblue 10px);
+}
+
+/*
+ * Computer screen
+ */
+ 
+ a.single {
+	display: block;
+}
+
+.progress-bar {
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+
+a.progress-bar {
+	padding: 0 !important;
+}
+
+.progress-indicator {
+	height: 100%;
+	position: absolute;
+	background-color: cadetblue;
+	display: block;
+}
+
+.critical .progress-indicator {
+	background-color: red;
+}
+
+.progress-text {
+	position: relative;
+	padding: 0.5em;
+	display: block;
+}
+
+.max-indicator {
+	background-color: midnightblue;
+	position: absolute;
+	height: 100%;
+	display: block;
+}
+
+#score {
+	position:absolute;
+	right:0;
+	bottom:0;
+}
+
+.skip-label{
+	color:darkturquoise;
+}
+
+.visible-with-mode-scanner li{
+	display:inline;
+}
+
+#scan-report-name-value, #scan-report-shields-value{
+	color: turquoise;
+}
+.visible-with-mode-scanner div{
+	overflow:hidden;
+	display:inline;
+}
+
+.visible-with-mode-scanner label{
+	padding-right:1em;
+}
+
+#scan-report-name label, #scan-report-shields label{
+	width:5em;
+	display:block;
+	float:left;
+}
+
+#scan-report-name{
+	display:block;
+}
+
+/**
+ * Commands visibility
+ */
+#cmd_toggleShields {
+	padding: 0;
+	line-height:2em;
+}
+
+#cmd_showStatusReport{
+	line-height:2em;
+}
+
+#cmd_showStatusReport .progress-text{
+	padding-left:3em;
+}
+
+#above-radar-slot{
+	height:3em;
+	background-color:black;
+}
+.torpedo-dot{
+	position:absolute;
+	width:0.5em;
+	height:0.5em;
+	border-radius:1em;
+	display:block;
+	background-color:white;
+}
+
+.antimatter-low{
+	background-color: maroon;
+}
+
+.shields-icon{
+    background-image: url(../images/shield.svg);
+    background-color: #11709f;
+    background-size: 2.5em;
+    background-repeat: no-repeat;
+    background-position: 0.1em;
+    width: 3em;
+    height: 2.5em;
+    position: absolute;
+    display: block;
+    z-index: 1;
+}
+
+.report-icon{
+	background-image: url('../images/report.svg');
+	background-color: #11709f;
+    background-size: 2.5em;
+    background-repeat: no-repeat;
+    background-position: 0.1em;
+    width: 3em;
+    height: 3em;
+    display: block;
+    float:left;
+    position:absolute;
+    z-index:1;
+}
+
+@media ( max-width : 400px) {
+	#cmd_repair {
+		padding-left: 2em;
+	}
+}
+
+.visible-with-mode-command, .visible-with-mode-scanner{
+	display:none;
+}
+
+.mode-command .visible-with-mode-command, .mode-scanner .visible-with-mode-scanner{
+	display:block;
+}
+
+
+.visible-with-repair,.visible-with-dock{
+	display:none;
+}
+
+.has-dock .visible-with-dock{
+	display:block;
+}
+
+.has-repair .visible-with-repair{
+	display:block;
+}
+
+.red-alert, .red-alert * {
+	color: red;
+	font-weight: bold;
+}
+
+.yellow-alert, .yellow-alert * {
+	color: yellow;
+	font-weight: bold;
+}
+
+#quadrantscan {
+	width: 99.5%;
+	/* 100% causes window scrolling which slows painting down*/
+	font-size: 130%;
+	margin: 0;
+	padding: 0;
+	height: 10em;
+	min-height: 10em;
+	max-height: 10em;
+	position: relative;
+	border-left: solid gray 1px;
+	border-top: solid gray 1px;
+	overflow:hidden;
+}
+
+#quadrantscan>div {
+	border-right: solid green 1px;
+	border-bottom: solid darkgreen 1px;
+	text-align: center;
+	width: 12.5%;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	font-size: inherit;
+	height: 1.2em;
+	line-height: 1.2em;
+	overflow: hidden;
+	position: absolute;
+}
+
+#lrs-button{
+	background-image: url('../images/radar.svg');
+	background-repeat: no-repeat;
+	background-size: 2.5em;
+	background-position: 0.2em 0.2em;
+}
+
+.star-class-a {
+	color: white;
+}
+
+.star-class-b {
+	color: cyan;
+}
+
+.star-class-f {
+	color: yellow;
+}
+
+.star-class-o {
+	color: darkturquoise;
+}
+
+.star-class-asteroid {
+	color: lightgray;
+}
+
+.selected {
+	background-color: midnightblue;
+}
+
+.container{
+	overflow:hidden;
+}
+/**
+ * Short range scan
+ */
+
+#shortrangescan {
+	width: 100%;
+	height: 6em;
+	min-height: 6em;
+	max-height: 6em;
+	overflow: visible;
+	border-collapse: collapse;
+	outline:solid gray 1px;
+	background-color:rgba(0,0,0,0.5);
+}
+
+#shortrangescan tr {
+	height: 2em;
+	min-height: 2em;
+	max-height: 2em;
+	overflow: visible;
+	border-bottom:solid gray 1px;
+}
+
+#shortrangescan td {
+	width: 33.3%;
+	text-align: center;
+	cursor: pointer;
+	padding: 5px 0 5px 0;
+	border-left:solid gray 1px;
+	border-bottom:solid gray 1px;
+}
+
+/*
+ * Intro screen
+ */
+ 
+.federation-logo {
+	display: block;
+	height: 10em;
+}
+
+#screen-intro {
+	display: block;
+	font-family: monospace;
+}
+
+.logo {
+	font-size: 100%;
+	font-weight: bold;
+}
+
+@media ( max-width : 1000px) {
+	#commandbar, #sectorselectionbar a, #sectorselectionbar button {
+		width: 100%;
+	}
+	#shortrangescan, .short-range-scan-container {
+		width: 100%;
+		margin-bottom: 0;
+	}
+	.logo {
+		font-size: 80%;
+	}
+}
+
+@media ( max-width : 600px) {
+	.logo {
+		font-size: 60%;
+	}
+}
+
+.intro-container {
+	margin-bottom: 1em;
+}
+
+.start-game-button {
+	display: block;
+	background-color: rgb(0, 108, 109);
+	animation: pulse 2s infinite;
+	font-size: 100%;
+}
+
+@keyframes pulse { 0% {
+	background-color: rgba(0, 108, 109, 0.3);
+	outline: solid transparent 1px;
+}
+
+50%{
+background-color:rgb(0,108,109);
+outline:solid turquoise 1px;}
+100%{background-color:rgba(0,108,109,0.3);
+outline:solid transparent 1px;
+}
+}
+
+.qr-code-link{
+	outline:none;
+}
+
+.qr-code-link img{
+	border:none;
+	width:100%;
+}
+
+.credits {
+	clear: both;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.7);
+	padding-left: 0.5em;
+}
+
+.credits a {
+	border: none transparent 0px;
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+/* 
+ * Messages popup
+ */
+#messages {
+	background-color:black;
+	color: white;
+	font-family: monospace, courier, courier new, typewriter, sans-serif;
+	border: solid grey 1px;
+}
+
+#dismiss-message-button {
+	margin-top: 0.5em;
+}
+
+#messages-content {
+	margin: 0;
+	padding: 0 0 1em 0;
+	overflow: hidden;
+	color:white;
+}
+
+#messages-content > li:not(:last-child){
+	border-bottom:solid grey 1px;
+	padding-bottom:0.5em;
+	margin-bottom:0.5em;
+}
+
+#messages-content>li.damage, .damaged {
+	color: red;
+}
+
+#messages-content>li.enterprise-damaged {
+	color: red;
+}
+
+#messages-content>li.error{
+	color: red;
+}
+
+#messages-content>li.fire {
+	color: #505050;
+}
+
+#messages-content>li.gameover {
+	color: yellow;
+	font-size: 120%;
+}
+
+#messages-content>li.score {
+	color: #505050;
+	font-size: 120%;
+}
+
+#messages-content>li.klingon-uncloaked {
+	color: orange;
+}
+
+#messages-content>li.klingon-damaged, .entry.klingon-destroyed {
+	color: #2d91c5;
+}
+
+#messages-content>li.gamewon {
+	color: yellow;
+	font-size: 120%;
+}
+
+#messages-content>li.product-info {
+	color: white;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+#messages-content>li.enterprise-repaired{
+	color: lime;
+}
+
+.messages-logo {
+	float: left;
+	background-color: darkcyan;
+	margin-right: 1em;
+	height: 5em;
+}
+
+
+
+#enterprise-schematics {
+	font-size: 1em;
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media ( max-width : 400px) {
+	#enterprise-schematics {
+		font-size: 0.9em;
+	}
+}
+
+.schematics, .overlay {
+	white-space: pre;
+	font-family: monospace;
+	top: 0;
+	margin:0;
+}
+
+/*
+ * Status report
+ */
+.overlay {
+	color: turquoise;
+}
+
+#screen-statusreport {
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+#screen-statusreport dl {
+	overflow: hidden;
+}
+
+#screen-statusreport dt {
+	clear: left;
+	float: left;
+	width: 50%;
+	max-width: 20em;
+	padding: 5px;
+	font-weight: bold;
+}
+
+#screen-statusreport .highlight{
+	color:red;
+}
+
+#screen-statusreport dd {
+	float: left;
+	padding: 5px;
+	color: turquoise;
+}
+
+.damage-light {
+	color: yellow;
+}
+
+.damage-medium {
+	color: orange;
+}
+
+.damage-bad {
+	color: red;
+}
+
+.damage-offline {
+	color: grey;
+}
+
+.impulse-disabled .vessel .wings {
+	color: grey;
+}
+
+.disruptor-disabled .vessel .bridge {
+	color: grey;
+}
+
+.overlay {
+	position: absolute;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.overlay.base {
+	z-index: 0;
+	position: fixed;
+}
+
+.overlay.impulse {
+	z-index: 2;
+}
+
+.overlay.warp{
+	z-index: 2;
+}
+
+.legend #what, .legend #status {
+	float: left;
+	width: 10em;
+}
+
+.status-flags {
+	display: block;
+	margin-left: 0em;
+	overflow: hidden;
+	font-size: 0.8em;
+	text-align:center;
+	background-color:darkgreen;
+	color:lime;
+}
+
+.status-flag {
+	display: block;
+	float: left;
+	width: 25%;
+	line-height: 1.5em;
+}
+
+.status-flag.damaged{
+	background-color:#a3393d;
+}
+
+#cmd_toggleShields .progress-text{
+	margin-left:3em;
+}
+
+.shield-west .shields-icon{
+	border-left:solid lime 0.5em;
+	width: 2.5em;
+}
+
+.shield-east .shields-icon{
+	border-right:solid lime 0.5em;
+	width: 2.5em;
+}
+
+.shield-north .shields-icon{
+	border-top:solid lime 0.5em;
+	height: 2.5em;
+}
+
+.shield-south .shields-icon{
+	border-bottom:solid lime 0.5em;
+	height: 2.5em;
+}
+
+.shield-omni .shields-icon{
+	border:solid lime 0.2em;
+}
+
+/*
+ * Mission briefing
+ */
+.manual .toc {
+	float: left;
+}
+
+.manual {
+	background-color: black;
+	color: white;
+	padding-left: 0.5em;
+	clear: both;
+}
+
+.manual a {
+	display: inline;
+	background: transparent;
+	float: none;
+	outline: none;
+}
+
+#cmd_manual {
+	font-size: 100%;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.status-online {
+	color: green;
+}
+
+.status-offline {
+	color: red;
+}
+
+.remark {
+	color: gray;
+}
+
+#screen-sectorscan {
+	background: rgba(10, 10, 10, 0.5);
+	outline: silver solid 1px;
+	padding: 1em;
+	overflow: hidden;
+}
+
+#update-app-prompt button, #install-app-prompt button {
+	width: 50%;
+}
+
+#update-app-prompt h2 {
+	padding: 0 0.5em;
+}
+
+/* popup animations */
+.PopupView {
+	position: absolute;
+	z-index: 3;
+	bottom: 0;
+	width: 100%;
+	box-sizing: border-box;
+	transform: translateX(-100%);
+	transition: transform 0.2s ease, visibility 0.2s;
+	visibility:hidden;
+}
+
+.PopupView.slidein {
+	left: 0%;
+	visibility: visible;
+	transform: translateX(0%);
+	transition: transform 0.2s ease, visibility 0.2s;
+}
+
+#glasspanel {
+	background-color: black;
+	opacity: 0;
+	touch-action: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	/* display doesn't work with FF transitions, have to use visibility*/
+	visibility: hidden;
+	transform: translateZ(0);
+	z-index: 2;
+	transition: opacity 0.2s, visibility 0.2s;
+}
+
+#glasspanel.fadein {
+	transition: opacity 0.2s, visibility 0s;
+	opacity: 0.75;
+	visibility: visible;
+}
+
+/* sector context menu */
+.sector-context-menu {
+	position: absolute;
+	z-index: 2;
+}
+
+.sector-context-menu .cell {
+	width: 4em;
+	height: 4em;
+	background-image: url('../images/hexagon_filled.svg');
+	background-size: cover;
+	position: absolute;
+	overflow:hidden;
+	opacity: 0;
+	transition: transform 200ms ease, opacity 200ms ease, visibility 200ms ease;
+	will-change: transform;
+}
+
+.sector-context-menu.expanded .cell{
+	opacity: 1;
+}
+
+.sector-context-menu .cell.disabled {
+	filter: grayscale(100%) brightness(20%) contrast(80%) opacity(80%);
+}
+
+.sector-context-menu .cell button {
+	outline: none;
+	border: none;
+	background: transparent;
+	width: 4em;
+	height: 4em;
+	background-size: 2.5em 2.5em;
+	background-repeat: no-repeat;
+	background-position: center;
+	font-size: 100%;
+	float: none;
+	line-height: 4em;
+	vertical-align: middle;
+}
+
+.expanded .cell.c1 {
+	transform: translate(3.45em,-2em);
+}
+
+.cell.c2 {
+	visibility:hidden;
+}
+
+.can-dock-with-starbase .cell.c2{
+	visibility:visible;
+}
+
+.expanded .cell.c2 {
+	transform: translate(0em,-4em);
+}
+
+.expanded .cell.c3 {
+	transform: translate(-3.45em,2em);
+}
+
+.expanded .cell.c4 {
+	transform: translate(-3.45em,-2em);
+}
+
+.expanded .cell.c5 {
+	transform: translate(0em, 4em);
+}
+
+.expanded .cell.c6 {
+	transform: translate(3.45em, 2em);
+}
+
+
+#cmd_navigate {
+	background-image: url('../images/navigation.svg')
+}
+
+#cmd_scanSector {
+	background-image: url('../images/radar.svg')
+}
+
+#cmd_firePhasers {
+	background-image: url('../images/laser.svg')
+}
+
+#cmd_precision_weapons{
+	background-image: url('../images/target.svg');
+}
+
+#cmd_precision_propulsion{
+	background-image: url('../images/target.svg'), url('../images/missile.svg');
+}
+
+#cmd_fireTorpedos {
+	background-image: url('../images/torpedo.svg')
+}
+
+#cmd_toggleFireAtWill {
+	background-image: url('../images/fire_at_will.svg')
+}
+
+#cmd_computer {
+	background-image: url('../images/cancel.svg')
+}
+
+#cmd_dockStarbase {
+	background-image: url('../images/dock.svg')
+}
+
+#em-metric {
+	font-size: 100%;
+	width: 1em;
+	height: 1em;
+	overflow: hidden;
+	bottom: 0;
+	position: absolute;
+}
+
+.app-menu {
+	padding: 0.5em;
+}
+
+.app-menu li a {
+	width: 100%;
+	width: 100%;
+	font-size: 100%;
+}
+
+.app-menu li a.disabled {
+	color: silver;
+	background-color: #11709f;
+}
+
+#app-menu-button {
+	background-image: url('../images/hamburger-menu.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position-x: 0.1em;
+}
+
+#app-install-prompt, #update-app-prompt {
+	margin-top:45%;
+	color: black;
+	padding: 0.2em;
+	background-color:darkgray;
+}
+
+#app-install-prompt{
+	top: 50%;
+	margin-top: -6em;
+}
+
+#app-install-prompt button, #update-app-prompt button{
+	color: blue;
+	background-color: white;
+}
+
+#install-yes {
+	background-image: url('../images/bookmark.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	padding-left: 2em;
+}
+
+/* Settings screen */
+
+.settings-screen {
+	padding: 0.5em;
+	background-color:black;
+}
+
+.settings-screen .label-small{
+	font-size:80%;
+}
+
+.settings-screen .label-medium{
+	font-size:100%;
+}
+
+.settings-screen .label-large{
+	font-size:120%;
+}
+
+.ui-scale-small{
+	font-size:80%;
+}
+
+.ui-scale-medium{
+	font-size:100%;
+}
+
+.ui-scale-large{
+	font-size:120%;
+}
+
+.ui-scale-xl{
+	font-size:140%;
+}
+
+.settings-screen .setting{
+	padding-top:1em;
+}
+
+/* credits and licenses screen */
+
+.credits-screen ul a{
+	background-color:transparent;
+	text-align:left;
+	text-decoration: underline;
+	font-weight:normal;
+	display:inline;
+	float:none;
+	line-height:1.8em;
+}
+
+/* high constrast theme */
+.ui-theme-highcontrast a, .ui-theme-highcontrast button{
+	background-color:darkblue;
+}
+
+.ui-theme-highcontrast #messages-content>li.klingon-damaged, .ui-theme-highcontrast .entry.klingon-destroyed {
+	color: lightskyblue;
+}
+
+.ui-theme-highcontrast .credits-screen ul a{
+	background-color:transparent;
+}
